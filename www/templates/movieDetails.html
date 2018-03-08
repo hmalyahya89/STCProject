@@ -1,0 +1,48 @@
+<ion-view title="Movie Details" id="page5">
+  <ion-content padding="true" class="has-header">
+    <div class="list card" id="movieDetails-card23">
+      <ion-item id="movieDetails-list-item23">Title: {{movie.original_title}}</ion-item>
+      <div class=" item item-image">
+        <img src="http://image.tmdb.org/t/p/w500{{movie.poster_path}}" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
+      </div>
+      <div class="item item-body" id="movieDetails-list-item-container6">
+        <div id="movieDetails-markdown7" class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;color:#000000;">Average Vote: {{movie.vote_average}}</p>
+        </div>
+      </div>
+      <ion-item class="assertive" id="movieDetails-list-item24">Release Date: {{movie.release_date}}</ion-item>
+    </div>
+    <div class="spacer" style="width: 300px; height: 5px;"></div>
+    <div id="movieDetails-markdown10" class="show-list-numbers-and-dots">
+      <p style="color:#000000;">{{movie.overview}}</p>
+    </div>
+    <div class="list card" id="movieDetails-card24">
+      <div class="item item-body" id="movieDetails-list-item-container9">
+        <div id="movieDetails-markdown15" ng-repeat="genre in movie.genres" class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;color:#000000;">
+            <strong>Genres:</strong>
+            {{genre.name}}</p>
+        </div>
+      </div>
+    </div>
+    <div id="movieDetails-container2">
+      <div class="spacer" style="width: 300px; height: 4px;"></div>
+    </div>
+    <div id="movieDetails-container3">
+      <ion-list id="movieDetails-list6">
+        <ion-item class="item-icon-left" id="movieDetails-list-item35">
+          <i class="icon ion-share"></i>Share</ion-item>
+        <div class="item item-body" id="movieDetails-list-item-container10">
+          <div id="movieDetails-markdown19" class="show-list-numbers-and-dots">
+            <p style="margin-top:0px;color:#000000;">
+              <strong>IMDb:</strong> {{externalLinks.imdb_id}}</p>
+          </div>
+        </div>
+      </ion-list>
+    </div>
+    <div class="list card" id="movieDetails-card25"></div>
+    <a ui-sref="tabsController.similarMovies({&quot;movie_id&quot;:&quot;&quot;+movie.id+&quot;&quot;})" id="movieDetails-button1" class="button button-stable button-block">Find Similar Movies!</a>
+    <button id="movieDetails-button4" ng-show="!isFavorite" ng-click="addToFavoriteList()" ng-hide="isFavorite" class="button button-positive button-block">Add To Favorite</button>
+    <button id="movieDetails-button5" ng-show="isFavorite" ng-click="removeFromFavoriteList()" ng-hide="!isFavorite" class="button button-assertive button-block">Remove From Favorite</button>
+  </ion-content>
+</ion-view>

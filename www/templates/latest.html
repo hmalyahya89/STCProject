@@ -1,0 +1,19 @@
+<ion-view title="Latest" id="page2">
+  <ion-content padding="true" class="has-header">
+    <a class="list card" style="display:block;text-decoration:none;" ui-sref="tabsController.movieDetails({&quot;movie_id&quot;:&quot;&quot;+movie.id+&quot;&quot;})" id="latest-card22">
+      <ion-item id="latest-list-item19">{{movie.original_title}}</ion-item>
+      <div class=" item item-image">
+        <img src="http://image.tmdb.org/t/p/w500{{movie.poster_path}}" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
+      </div>
+      <div class="item item-body" id="latest-list-item-container4">
+        <div id="latest-markdown4" class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;color:#000000;">Average Vote: {{movie.vote_average}}</p>
+        </div>
+      </div>
+      <ion-item class="assertive" id="latest-list-item20">{{movie.release_date}}</ion-item>
+    </a>
+    <div id="latest-markdown5" class="show-list-numbers-and-dots">
+      <p style="color:#000000;">{{movie.overview}}</p>
+    </div>
+  </ion-content>
+</ion-view>

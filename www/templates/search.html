@@ -1,0 +1,17 @@
+<ion-view title="Search" id="page3">
+  <ion-content padding="true" class="has-header">
+    <form id="search-form2" class="list">
+      <label class="item item-input" id="search-search2">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="search" placeholder="Search" ng-model="movie.name" ng-change="searchMovieDB()">
+      </label>
+    </form>
+    <ion-list id="search-list1">
+      <ion-item class="item-thumbnail-left" id="search-list-item8" ui-sref="tabsController.movieDetails({&quot;movie_id&quot;:&quot;&quot;+movie.id+&quot;&quot;})" ng-repeat="movie in movies">
+        <img src="http://image.tmdb.org/t/p/w92{{movie.poster_path}}">
+        <h2>{{movie.original_title}}</h2>
+        <p>{{movie.release_date}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

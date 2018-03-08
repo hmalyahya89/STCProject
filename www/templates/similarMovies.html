@@ -1,0 +1,11 @@
+<ion-view title="Similar Movies" id="page6">
+  <ion-content padding="true" class="has-header">
+    <ion-list id="similarMovies-list2">
+      <ion-item class="item-thumbnail-left" id="similarMovies-list-item11" ui-sref="tabsController.movieDetails({&quot;movie_id&quot;:&quot;&quot;+movie.id+&quot;&quot;})" ng-repeat="movie in movies">
+        <img src="http://image.tmdb.org/t/p/w92{{movie.poster_path}}">
+        <h2>{{movie.original_title}}</h2>
+        <p>{{movie.release_date}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
